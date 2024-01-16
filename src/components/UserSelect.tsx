@@ -129,6 +129,7 @@ const UserSelect: React.FC = () => {
 
   useEffect(() => {
     const handleKeyDownOutsideInput = (event: Event) => {
+      console.log("handleKeyDownOutsideInput called");
       const keyboardEvent = event as unknown as KeyboardEvent;
       if (
         keyboardEvent.key === "Backspace" &&
@@ -145,6 +146,7 @@ const UserSelect: React.FC = () => {
           handleChipRemove(selectedUsers[lastSelectedUserIndex]);
           setHighlightedTagIndex(-1);
         } else {
+          console.log("Effect triggered")
           setHighlightedTagIndex(lastSelectedUserIndex);
         }
       }
