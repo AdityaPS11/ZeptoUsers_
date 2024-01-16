@@ -1,4 +1,5 @@
 // UserSelect.tsx
+
 import React, { useState, useRef, useEffect, KeyboardEvent } from "react";
 import axios from "axios";
 import UserChip from "./UserChip";
@@ -91,23 +92,6 @@ const UserSelect: React.FC = () => {
           handleOptionSelect(availableUsers[highlightedIndex]);
         }
         break;
-      case "Backspace":
-        if (inputValue === "" && selectedUsers.length > 0) {
-          event.preventDefault();
-          const lastSelectedUserIndex =
-            highlightedTagIndex !== -1
-              ? highlightedTagIndex
-              : selectedUsers.length - 1;
-
-          setHighlightedTagIndex(lastSelectedUserIndex); 
-
-          if (highlightedTagIndex !== -1) {
-            // Remove the highlighted tag
-            handleChipRemove(selectedUsers[lastSelectedUserIndex]);
-            setHighlightedTagIndex(-1);
-          }
-        }
-        break;
       default:
         break;
     }
@@ -144,9 +128,10 @@ const UserSelect: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleKeyDownOutsideInput = (event: KeyboardEvent) => {
+    const handleKeyDownOutsideInput = (event: Event) => {
+      const keyboardEvent = event as unknown as KeyboardEvent;
       if (
-        event.key === "Backspace" &&
+        keyboardEvent.key === "Backspace" &&
         !inputRef.current?.value &&
         selectedUsers.length > 0
       ) {
@@ -156,11 +141,11 @@ const UserSelect: React.FC = () => {
             ? highlightedTagIndex
             : selectedUsers.length - 1;
 
-        setHighlightedTagIndex(lastSelectedUserIndex); // Highlight the last tag
-
         if (highlightedTagIndex !== -1) {
           handleChipRemove(selectedUsers[lastSelectedUserIndex]);
           setHighlightedTagIndex(-1);
+        } else {
+          setHighlightedTagIndex(lastSelectedUserIndex);
         }
       }
     };
