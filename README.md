@@ -52,7 +52,7 @@ node -v
 npm -v
 ```
 ### Installation
-git clone https://github.com/your-username/zeptochip.git
+git clone https://github.com/AdityaPS11/ZeptoUsers_
 cd zeptochip
 npm install
 
