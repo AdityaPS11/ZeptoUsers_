@@ -129,7 +129,6 @@ const UserSelect: React.FC = () => {
 
   useEffect(() => {
     const handleKeyDownOutsideInput = (event: Event) => {
-      console.log("handleKeyDownOutsideInput called");
       const keyboardEvent = event as unknown as KeyboardEvent;
       if (
         keyboardEvent.key === "Backspace" &&

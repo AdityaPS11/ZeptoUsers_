@@ -15,8 +15,9 @@ interface UserData {
   }
 
 const UserChip: React.FC<UserChipProps> = ({ user, highlighted, onRemove }) => (
+
   <div
-    className={`bg-gray-400 text-white font-semibold flex items-center mb-2 rounded-full pr-2 cursor-pointer mr-2 ${highlighted ? "bg-blue-300" : ""}`}
+    className={` text-white font-semibold flex items-center mb-2 rounded-full pr-2 cursor-pointer mr-2 ${highlighted ? "bg-blue-300" : "bg-gray-400"}`}
   >
     <img
       src={user.picture.thumbnail}
