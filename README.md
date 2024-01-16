@@ -59,3 +59,16 @@ npm install
 ### Running Locally
 npm run dev
 
+### Demo
+![image](https://github.com/AdityaPS11/ZeptoUsers_/assets/124509401/a6e36f2c-d723-4763-8984-8429ac1ed23d)
+
+![image](https://github.com/AdityaPS11/ZeptoUsers_/assets/124509401/1e73c785-677e-426d-9d0c-24878eae7028)
+
+![image](https://github.com/AdityaPS11/ZeptoUsers_/assets/124509401/a97b014b-cb10-43af-8236-f70cec05a8c6)
+
+
+
+
+
+
+
