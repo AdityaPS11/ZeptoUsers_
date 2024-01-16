@@ -10,9 +10,7 @@ ZeptoChip is a user selection component built with Vite, React, Tailwind CSS, an
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running Locally](#running-locally)
-- [Demo](#demo)
-- [Contributing](#contributing)
-- [License](#license)
+- [Demo](#screenshot)
 
 ## About the Project
 
